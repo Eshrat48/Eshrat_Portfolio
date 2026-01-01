@@ -1,0 +1,37 @@
+{
+  "name": "eshrat_portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eshrat48/Eshrat_Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eshrat48/Eshrat_Portfolio/issues"
+  },
+  "homepage": "https://github.com/Eshrat48/Eshrat_Portfolio#readme",
+  "description": "",
+  "dependencies": {
+    "framer-motion": "^12.23.26",
+    "lottie-web": "^5.13.0",
+    "next": "^16.1.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-lottie-player": "^2.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}

@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Skills from '../components/Skills'
 
 export default function Home(){
   return (
@@ -15,19 +16,11 @@ export default function Home(){
       <Header />
       <Hero />
       <About />
+      <Skills />
       <main className="mt-12 mb-16">
         {/* Content Sections */}
         <div className="container">
         <section className="grid gap-12">
-
-          <section>
-            <h2 className="text-2xl font-semibold" style={{color:'var(--espresso)'}}>Skills</h2>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {['React.js','Next.js','JavaScript (ES6+)','Tailwind CSS','DaisyUI','Framer Motion'].map((skill) => (
-                <li key={skill} className="px-3 py-1 rounded" style={{backgroundColor:'var(--leafy)', color:'var(--espresso)'}}>{skill}</li>
-              ))}
-            </ul>
-          </section>
 
           <section>
             <h2 className="text-2xl font-semibold" style={{color:'var(--espresso)'}}>Projects</h2>

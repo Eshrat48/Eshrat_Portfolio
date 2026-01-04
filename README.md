@@ -1,4 +1,4 @@
-# Eshrat Kamal Nova — Portfolio
+# Eshrat Kamal Nova — Full Stack Portfolio
 
 Starter Next.js + Tailwind portfolio scaffold.
 

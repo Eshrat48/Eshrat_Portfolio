@@ -27,7 +27,7 @@ export default function Header() {
             </div>
             <div>
               <div className="text-base md:text-lg font-semibold" style={{color:'var(--espresso)'}}>Eshrat Kamal Nova</div>
-              <div className="text-[11px] uppercase tracking-[0.2em]" style={{color:'var(--leafy)'}}>Frontend Developer</div>
+              <div className="text-[11px] uppercase tracking-[0.2em]" style={{color:'var(--leafy)'}}>Full Stack Developer</div>
             </div>
           </div>
 

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Hero from '../components/Hero'
 
 export default function Home(){
   return (
@@ -11,17 +12,11 @@ export default function Home(){
         <meta name="description" content="Frontend developer portfolio of Eshrat Kamal Nova" />
       </Head>
       <Header />
-      <main className="container mt-12">
+      <Hero />
+      <main>
+        {/* Content Sections */}
+        <div className="container mt-12">
         <section className="grid gap-8">
-          <motion.div initial={{opacity:0, y:10}} animate={{opacity:1, y:0}} transition={{duration:0.6}}>
-            <h1 className="text-4xl md:text-5xl font-bold" style={{color:'var(--espresso)'}}>Eshrat Kamal Nova</h1>
-            <p className="mt-4 text-lg" style={{color:'var(--caramel)'}}>Frontend Developer — React.js, Next.js, Tailwind CSS</p>
-            <p className="mt-4" style={{color:'var(--espresso)'}}>Dhaka, Bangladesh • +8801768-092207 • eshratkamalnova@gmail.com</p>
-            <div className="mt-6 flex gap-4">
-              <a href="https://github.com/Eshrat48" target="_blank" rel="noreferrer" className="px-4 py-2 text-white rounded" style={{backgroundColor:'var(--caramel)'}}>GitHub</a>
-              <a href="https://www.linkedin.com/in/eshrat-kamal-nova" target="_blank" rel="noreferrer" className="px-4 py-2 border rounded" style={{borderColor:'var(--espresso)', color:'var(--espresso)'}}>LinkedIn</a>
-            </div>
-          </motion.div>
 
           <section>
             <h2 className="text-2xl font-semibold" style={{color:'var(--espresso)'}}>Skills</h2>
@@ -72,6 +67,7 @@ export default function Home(){
             </ul>
           </section>
         </section>
+        </div>
       </main>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
+import About from '../components/About'
 
 export default function Home(){
   return (
@@ -13,10 +14,11 @@ export default function Home(){
       </Head>
       <Header />
       <Hero />
-      <main>
+      <About />
+      <main className="mt-12 mb-16">
         {/* Content Sections */}
-        <div className="container mt-12">
-        <section className="grid gap-8">
+        <div className="container">
+        <section className="grid gap-12">
 
           <section>
             <h2 className="text-2xl font-semibold" style={{color:'var(--espresso)'}}>Skills</h2>

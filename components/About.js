@@ -52,13 +52,13 @@ export default function About() {
               </div>
             </div>
 
-            <p className="text-sm leading-6" style={{ color: 'var(--sand)' }}>
+            <p className="text-base leading-7" style={{ color: 'var(--sand)' }}>
               My programming journey began in university, where I discovered my passion for creating meaningful digital experiences. What started as curiosity about how websites work evolved into a deep love for full-stack development. I've built my skills through hands-on projects, competitions like IEEE Xtreme, and continuous learning.
             </p>
-            <p className="text-sm leading-6" style={{ color: 'var(--sand)' }}>
+            <p className="text-base leading-7" style={{ color: 'var(--sand)' }}>
               I thrive on building accessible, high-performing web applications with React, Next.js, Node.js, and modern UI systems. What I enjoy most is bridging design and engineering—transforming ideas into polished, purposeful experiences that users love. Problem-solving challenges excite me, especially when they push me to learn new technologies.
             </p>
-            <p className="text-sm leading-6" style={{ color: 'var(--sand)' }}>
+            <p className="text-base leading-7" style={{ color: 'var(--sand)' }}>
               Beyond coding, I'm passionate about competitive programming and staying active through sports. I also enjoy exploring new tools, contributing to open-source projects, and prototyping innovative ideas that blend automation with delightful user experiences.
             </p>
 
@@ -114,7 +114,7 @@ export default function About() {
             </motion.div>
 
             <div>
-              <div className="text-sm font-semibold mb-3" style={{ color: 'var(--sand)' }}>
+              <div className="text-base font-semibold mb-3" style={{ color: 'var(--sand)' }}>
                 Education
               </div>
               <div className="space-y-3">
@@ -126,13 +126,14 @@ export default function About() {
                   className="pl-4 border-l"
                   style={{ borderColor: 'var(--caramel)' }}
                 >
-                  <div className="text-sm font-semibold" style={{ color: 'var(--sand)' }}>
+                  <div className="text-base font-semibold" style={{ color: 'var(--sand)' }}>
                     BSc Computer Science & Engineering
                   </div>
-                  <div className="text-xs" style={{ color: 'var(--leafy)' }}>
-                    University of Liberal Arts Bangladesh • 2022 – 2026
+                  <div className="text-sm" style={{ color: 'var(--leafy)' }}>
+                    University of Liberal Arts Bangladesh • 2022 – 2026{' '}
+                    <span style={{ color: 'var(--leafy)' }}>(Expected)</span>
                   </div>
-                  <div className="text-xs" style={{ color: 'var(--sand)' }}>GPA: 3.54</div>
+                  <div className="text-xs" style={{ color: 'var(--sand)' }}>GPA: 3.60</div>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: -10 }}
@@ -170,7 +171,7 @@ export default function About() {
             </div>
 
             <div>
-              <div className="text-sm font-semibold mb-3" style={{ color: 'var(--sand)' }}>
+              <div className="text-base font-semibold mb-3" style={{ color: 'var(--sand)' }}>
                 Achievements
               </div>
               <div className="space-y-2">

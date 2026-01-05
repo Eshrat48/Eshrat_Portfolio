@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
+import { useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
@@ -10,6 +11,11 @@ import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 
 export default function Home(){
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Head>

@@ -71,7 +71,7 @@ export default function Skills() {
           <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--espresso)' }}>
             Skills & <span style={{ color: 'var(--caramel)' }}>Technologies</span>
           </h2>
-          <p className="mt-3 text-sm md:text-base" style={{ color: 'var(--caramel)' }}>
+          <p className="mt-3 text-base md:text-lg" style={{ color: 'var(--caramel)' }}>
             I build scalable, robust applications using a modern tech stack. Here is a breakdown of my expertise across the development spectrum.
           </p>
         </div>

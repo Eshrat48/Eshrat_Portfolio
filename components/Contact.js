@@ -63,7 +63,7 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--espresso)' }}>
             Let's <span style={{ color: 'var(--caramel)' }}>Connect</span>
           </h2>
-          <p className="mt-3 text-sm md:text-base max-w-2xl mx-auto" style={{ color: 'var(--caramel)' }}>
+          <p className="mt-3 text-base md:text-lg max-w-2xl mx-auto" style={{ color: 'var(--caramel)' }}>
             I'm always open to new opportunities, collaborations, and interesting conversations. Feel free to reach out!
           </p>
         </motion.div>

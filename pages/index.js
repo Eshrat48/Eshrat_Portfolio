@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
+import Contact from '../components/Contact'
 
 export default function Home(){
   return (
@@ -19,22 +20,7 @@ export default function Home(){
       <About />
       <Skills />
       <Projects />
-      <main className="mt-12 mb-16">
-        {/* Content Sections */}
-        <div className="container">
-        <section className="grid gap-12">
-
-          <section>
-            <h2 className="text-2xl font-semibold" style={{color:'var(--espresso)'}}>Achievements</h2>
-            <ul className="mt-3 list-disc list-inside" style={{color:'var(--espresso)'}}>
-              <li>4th Place in Bangladesh, IEEE Xtreme 19.0 Programming Competition</li>
-              <li>Finalist, ULAB Nutrition Olympiad 2025</li>
-              <li>Participant – Hult Prize (Tech & Innovation Track)</li>
-            </ul>
-          </section>
-        </section>
-        </div>
-      </main>
+      <Contact />
       <Footer />
     </>
   )

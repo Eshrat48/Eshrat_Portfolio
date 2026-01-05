@@ -64,8 +64,14 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="w-full py-14 md:py-16">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="projects" className="w-full py-14 md:py-16 relative overflow-hidden">
+      {/* Animated Background Gradient */}
+      <div className="absolute inset-0 pointer-events-none opacity-10">
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" style={{backgroundColor:'var(--caramel)'}}></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl" style={{backgroundColor:'var(--leafy)'}}></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <motion.div
@@ -100,12 +106,12 @@ export default function Projects() {
             >
               <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                 {/* Project Image - Left or Right based on index */}
-                <div className={`relative overflow-hidden flex items-center justify-center md:min-h-96 ${index % 2 === 1 ? 'md:order-2' : ''}`} style={{ backgroundColor: 'var(--cinnamon)' }}>
+                <div className={`relative overflow-hidden flex items-center justify-center md:min-h-96 group ${index % 2 === 1 ? 'md:order-2' : ''}`} style={{ backgroundColor: 'var(--cinnamon)' }}>
                 {project.image && (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 )}
                 {!project.image && (

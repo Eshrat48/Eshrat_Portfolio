@@ -1,27 +1,50 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Header() {
   const navItems = [
     { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ]
 
-  const [active, setActive] = useState('projects')
+  const [active, setActive] = useState('hero')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['hero', 'about', 'skills', 'projects', 'contact']
+      const scrollPosition = window.scrollY + 150 // Offset for sticky header
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i])
+        if (section) {
+          const sectionTop = section.offsetTop
+          if (scrollPosition >= sectionTop) {
+            setActive(sections[i])
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Call once on mount
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleNavClick = (id) => {
     setActive(id)
+    // Smooth scroll handled by CSS
   }
 
   return (
-    <header className="sticky top-0 z-30 py-4 bg-[color:var(--sand)]/90 backdrop-blur-md border-b border-[color:var(--caramel)]/20">
+    <header className="sticky top-0 z-30 py-4 backdrop-blur-md border-b border-[color:var(--caramel)]/20 transition-all duration-300" style={{backgroundColor:'rgba(240, 218, 174, 0.95)'}}>
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Left: Logo + name */}
-          <div className="flex items-center gap-4">
+          <a href="#hero" onClick={() => handleNavClick('hero')} className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition-opacity">
             <div className="w-10 h-10 rounded-full bg-[color:var(--leafy)]/30 flex items-center justify-center overflow-hidden border border-[color:var(--caramel)]/30">
               <Image src="/images/logo.png" alt="Logo" width={40} height={40} priority />
             </div>
@@ -29,7 +52,7 @@ export default function Header() {
               <div className="text-base md:text-lg font-semibold" style={{color:'var(--espresso)'}}>Eshrat Kamal Nova</div>
               <div className="text-[11px] uppercase tracking-[0.2em]" style={{color:'var(--leafy)'}}>Full Stack Developer</div>
             </div>
-          </div>
+          </a>
 
           {/* Center: Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -57,7 +80,7 @@ export default function Header() {
 
           {/* Right: Resume button */}
           <div className="flex items-center gap-4">
-            <a href="/Eshrat-Kamal-Nova-Frontend-Developer-Resume.pdf" download className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-white rounded-full shadow-sm hover:scale-105 transition-transform"
+            <a href="https://drive.google.com/file/d/1N1zagPf6uO9XUOpvpPSzwwXQjx62APuP/view?usp=drive_link" target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-white rounded-full shadow-sm hover:scale-105 transition-transform"
               style={{ backgroundImage: 'linear-gradient(90deg, var(--caramel), var(--cinnamon))' }}>
               <span className="text-sm md:text-base font-medium">Resume</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">

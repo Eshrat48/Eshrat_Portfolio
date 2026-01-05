@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Skills from '../components/Skills'
+import Projects from '../components/Projects'
 
 export default function Home(){
   return (
@@ -17,41 +18,11 @@ export default function Home(){
       <Hero />
       <About />
       <Skills />
+      <Projects />
       <main className="mt-12 mb-16">
         {/* Content Sections */}
         <div className="container">
         <section className="grid gap-12">
-
-          <section>
-            <h2 className="text-2xl font-semibold" style={{color:'var(--espresso)'}}>Projects</h2>
-            <ul className="mt-3 space-y-3">
-              <li className="p-4 rounded border" style={{backgroundColor:'var(--sand)', borderColor:'var(--leafy)'}}>
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <div className="font-semibold" style={{color:'var(--espresso)'}}>HabitTracker — MERN Stack Habit App</div>
-                    <div className="text-sm" style={{color:'var(--caramel)'}}>A full-stack habit management platform with authentication and streak tracking.</div>
-                  </div>
-                  <div className="space-x-2 text-sm" style={{color:'var(--caramel)'}}>
-                    <a className="underline" href="#">Live</a>
-                    <a className="underline" href="#">Client</a>
-                    <a className="underline" href="#">Server</a>
-                  </div>
-                </div>
-              </li>
-              <li className="p-4 rounded border" style={{backgroundColor:'var(--sand)', borderColor:'var(--leafy)'}}>
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <div className="font-semibold" style={{color:'var(--espresso)'}}>AppHub — App Showcase Web Platform</div>
-                    <div className="text-sm" style={{color:'var(--caramel)'}}>Responsive SPA for browsing and managing hero apps with analytics and smooth UI.</div>
-                  </div>
-                  <div className="space-x-2 text-sm" style={{color:'var(--caramel)'}}>
-                    <a className="underline" href="#">Live</a>
-                    <a className="underline" href="#">GitHub</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section>
 
           <section>
             <h2 className="text-2xl font-semibold" style={{color:'var(--espresso)'}}>Achievements</h2>

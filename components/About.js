@@ -53,13 +53,13 @@ export default function About() {
             </div>
 
             <p className="text-sm leading-6" style={{ color: 'var(--sand)' }}>
-              I build accessible, high-performing web applications with React, Next.js, Node.js, and modern UI
-              systems. I enjoy bridging design and engineering, crafting experiences that feel polished and
-              purposeful.
+              My programming journey began in university, where I discovered my passion for creating meaningful digital experiences. What started as curiosity about how websites work evolved into a deep love for full-stack development. I've built my skills through hands-on projects, competitions like IEEE Xtreme, and continuous learning.
             </p>
             <p className="text-sm leading-6" style={{ color: 'var(--sand)' }}>
-              When not coding, I explore new tools, contribute to open source, or prototype ideas that blend
-              automation and delightful UX.
+              I thrive on building accessible, high-performing web applications with React, Next.js, Node.js, and modern UI systems. What I enjoy most is bridging design and engineering—transforming ideas into polished, purposeful experiences that users love. Problem-solving challenges excite me, especially when they push me to learn new technologies.
+            </p>
+            <p className="text-sm leading-6" style={{ color: 'var(--sand)' }}>
+              Beyond coding, I'm passionate about competitive programming and staying active through sports. I also enjoy exploring new tools, contributing to open-source projects, and prototyping innovative ideas that blend automation with delightful user experiences.
             </p>
 
             <div className="flex flex-wrap gap-3">

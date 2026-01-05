@@ -6,6 +6,7 @@ export default function Header() {
   const navItems = [
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
+    { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ]
@@ -14,7 +15,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'projects', 'contact']
+      const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'contact']
       const scrollPosition = window.scrollY + 150 // Offset for sticky header
 
       for (let i = sections.length - 1; i >= 0; i--) {

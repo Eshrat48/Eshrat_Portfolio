@@ -11,6 +11,19 @@ export default function Contact() {
       color: 'var(--caramel)'
     },
     {
+      icon: FiPhone,
+      label: 'Phone',
+      value: '+880 1768-092207',
+      color: 'var(--cinnamon)'
+    },
+    {
+      icon: FiPhone,
+      label: 'WhatsApp',
+      value: '+880 1768-092207',
+      link: 'https://wa.me/8801768092207',
+      color: 'var(--leafy)'
+    },
+    {
       icon: FiLinkedin,
       label: 'LinkedIn',
       value: 'Eshrat Kamal Nova',

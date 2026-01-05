@@ -1,8 +1,23 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { SiReact, SiNodedotjs, SiMongodb, SiFirebase, SiTailwindcss } from 'react-icons/si';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import ProjectModal from './ProjectModal';
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
+
   const projects = [
     {
       title: 'ScholarStream',
@@ -14,6 +29,16 @@ export default function Projects() {
       liveLink: 'https://scholar-stream-client-five.vercel.app/',
       clientLink: 'https://github.com/Eshrat48/ScholarStream-Client.git',
       serverLink: 'https://github.com/Eshrat48/ScholarStream-Server.git',
+      challenges: [
+        'Implementing secure payment integration with Stripe while maintaining PCI compliance',
+        'Designing a scalable role-based access control system for students, universities, and admins',
+        'Optimizing real-time notification delivery without impacting application performance'
+      ],
+      improvements: [
+        'Add AI-powered scholarship recommendation engine based on student profiles',
+        'Implement advanced analytics dashboard with data visualization for administrators',
+        'Integrate multilingual support to reach international students'
+      ],
       featured: true
     },
     {
@@ -26,6 +51,16 @@ export default function Projects() {
       liveLink: 'https://habit-tracker24.netlify.app/',
       clientLink: 'https://github.com/Eshrat48/habit-tracker-client.git',
       serverLink: 'https://github.com/Eshrat48/habit-tracker-server.git',
+      challenges: [
+        'Calculating accurate streak data across different time zones',
+        'Ensuring data persistence and sync between client and server for offline capability',
+        'Creating an intuitive UI for visualizing 30-day habit progress'
+      ],
+      improvements: [
+        'Add gamification features with badges and rewards for milestone achievements',
+        'Implement social features for friend accountability and shared habit challenges',
+        'Develop mobile app version using React Native for better user engagement'
+      ],
       featured: true
     },
     {
@@ -37,6 +72,16 @@ export default function Projects() {
       techBadge: { name: 'React', icon: SiReact },
       liveLink: 'https://green-nest-app.netlify.app/',
       githubLink: 'https://github.com/Eshrat48/green-nest.git',
+      challenges: [
+        'Managing complex state across multiple components using Context API efficiently',
+        'Implementing protected routes with persistent authentication using localStorage',
+        'Optimizing image loading for large plant catalog without sacrificing performance'
+      ],
+      improvements: [
+        'Add shopping cart and checkout functionality with payment gateway integration',
+        'Implement plant care reminder system with push notifications',
+        'Create AR feature for visualizing plants in users\' homes before purchase'
+      ],
       featured: false
     },
     {
@@ -48,6 +93,16 @@ export default function Projects() {
       techBadge: { name: 'React', icon: SiReact },
       liveLink: 'https://euphonious-centaur-1a43b1.netlify.app/',
       githubLink: 'https://github.com/Eshrat48/AppHub.git',
+      challenges: [
+        'Creating responsive data visualizations using Recharts that work across all screen sizes',
+        'Implementing efficient real-time search filtering without performance degradation',
+        'Managing localStorage data persistence while handling edge cases and storage limits'
+      ],
+      improvements: [
+        'Add user authentication for personalized app recommendations',
+        'Implement app rating and review submission functionality',
+        'Create admin panel for managing app listings and user feedback'
+      ],
       featured: false
     }
   ];
@@ -162,16 +217,26 @@ export default function Projects() {
 
                   {/* Links */}
                   <div className="flex items-center gap-4 flex-wrap">
+                    <motion.button
+                      onClick={() => openModal(project)}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center gap-2 px-6 py-3 rounded-full text-base font-semibold transition-all cursor-pointer"
+                      style={{ backgroundColor: 'var(--caramel)', color: 'white' }}
+                    >
+                      <FiExternalLink size={20} />
+                      View Details
+                    </motion.button>
+                    
                     <motion.a
                       href={project.liveLink}
                       target="_blank"
                       rel="noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-2 px-6 py-3 rounded-full text-base font-semibold transition-all"
-                      style={{ backgroundColor: 'var(--caramel)', color: 'white' }}
+                      className="flex items-center gap-2 px-6 py-3 rounded-full text-base font-semibold transition-all border-2"
+                      style={{ borderColor: 'var(--caramel)', color: 'var(--sand)' }}
                     >
-                      <FiExternalLink size={20} />
                       Live Demo
                     </motion.a>
                     
@@ -216,6 +281,13 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
+
+        {/* Project Modal */}
+        <ProjectModal 
+          project={selectedProject} 
+          isOpen={isModalOpen} 
+          onClose={closeModal} 
+        />
 
         {/* View All Button */}
         <motion.div
